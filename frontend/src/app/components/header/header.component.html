@@ -1,0 +1,16 @@
+<ion-header collapse mode="ios" no-border>
+  <ion-toolbar color="primary">
+    <ion-icon name="home-outline" class="home" *ngIf="router.url != '/home' && router.url != '/catalogo'" (click)="backToHome()"></ion-icon>
+    <ion-buttons slot="start" *ngIf="titulo == 'Catálogo' && categorias.length > 0">
+      <ion-button fill="clear" (click)="presentPopover( $event)"><ion-icon color="light" name="menu-outline" ></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-searchbar animated (keydown.enter)="BuscarProducto($event)" mode="ios" placeholder="Utilizar Enter para buscar" *ngIf="titulo == 'Inicio'"></ion-searchbar>
+    <ion-title text-capitalize text-center [ngClass]="{'hidden-xs-down': titulo == 'Inicio' }">{{ titulo}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-avatar>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTKfWT-sqV_UEFxLcZ60qISKCez6vNfj-JuqD8Rb41VU2wswGXj&usqp=CAU">
+      </ion-avatar>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+  

@@ -1,0 +1,27 @@
+<!-- Generated template for the PopoverPageComponent component -->
+<ion-list>
+  <ion-list-header lines="full" class="" mode="ios" color="primary">
+    <ion-button *ngIf="tipo != ''" (click)="listaFiltros()"><ion-icon color="light" name="chevron-back-outline"></ion-icon></ion-button>
+    <ion-label *ngIf="tipo == ''"> Filtrar Por: </ion-label>
+    <ion-label *ngIf="tipo != ''"> {{ tipo | titlecase}} </ion-label>
+  </ion-list-header>
+  <!-- Container asociado a la lista de las categorias de filtros.-->
+  <ng-container *ngIf="tipo == ''">
+    <ion-item *ngFor="let filtro of filtros" (click)="MostrarFiltro(filtro.nombre)" class="animated fadeIn fast">
+      <ion-label><b>{{filtro.nombre | titlecase}} </b></ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+    </ion-item>
+  </ng-container>
+  <!--    -->
+  <hr> 
+  <ng-container *ngIf="tipo == '' && filtrosAplicados.length > 0">
+    <ion-list class="filtrosAplicados">
+      <ion-item-divider>Filtros Aplicados: </ion-item-divider>
+        <ion-chip outline color="primary" mode="ios" *ngFor="let filtro of filtrosAplicados" (click)="quitarFiltroAplicado(filtro.id, filtro.tipo)">
+            <ion-label>
+                <ion-icon name="close" slot="start"  slot="icon-only"> </ion-icon> {{filtro.nombre | lowercase | titlecase}}
+            </ion-label>
+        </ion-chip>
+    </ion-list>
+  </ng-container>
+  <app-filtro [data]="data" [tipo]="tipo" (filtrarDatos)="EjecutarFiltro()" *ngIf="tipo != ''"></app-filtro>

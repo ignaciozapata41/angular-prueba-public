@@ -1,0 +1,7 @@
+<ion-item *ngFor="let item of data" class="animated fadeIn fast" (click)="itemClicked(item)">
+  <ng-container *ngIf="!item.disable">
+    <ion-checkbox mode="ios" [(ngModel)]="item.selected"></ion-checkbox>
+    <ion-label>{{item.nombre | lowercase | titlecase }} </ion-label>
+<!--     <ion-note slot="end" color="azul" mode="ios">{{ item.recursos_count }}</ion-note> -->
+  </ng-container>
+</ion-item>

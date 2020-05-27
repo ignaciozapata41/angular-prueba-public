@@ -1,0 +1,80 @@
+ion-label, ion-icon:hover{
+    cursor: pointer;
+}
+
+ion-img{
+    height: 400px;
+}
+
+ion-row ion-label{
+    font-weight: bold;
+}
+
+ion-card-title{
+    color: var(--ion-color-danger);
+    font-weight: bold;
+}
+
+.td, .td-b{
+    height: 35px;
+}
+
+.detalles{
+    background: blue;
+}
+
+.tr{
+    text-align: center;
+}
+
+.td{
+    text-align: left;
+}
+
+.td-b{
+    font-weight: bold;
+    text-align: left;
+}
+
+.th{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+ion-button ion-icon{
+    margin-right: 5px;
+}
+
+.descripcion{
+    margin-top:5px;
+    color: var(--ion-color-primary);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) 
+{
+    ion-img{
+        height: 250px;
+    }
+    
+}
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 350px) 
+  and (max-device-width: 720px) 
+  and (-webkit-min-device-pixel-ratio: 1) 
+{
+    ion-img{
+        height: 250px;
+    }
+    
+}
+

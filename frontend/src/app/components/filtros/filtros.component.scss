@@ -1,0 +1,60 @@
+
+.popoverItem:hover{
+    cursor: pointer;
+    font-size: 13.6px;
+}
+
+.popoverItem{
+    font-size: 13px;
+}
+
+.popoverItem ion-icon{
+    font-size: 12px;
+}
+
+ion-list ion-item:hover{
+    cursor: pointer;
+}
+
+ion-list ion-item ion-icon{
+    font-size: 16px;
+}
+
+ion-list-header{
+    text-align: center;
+    padding-bottom:5px;
+}
+
+ion-list-header ion-label{
+    font-size: 17px;
+    color:white;
+}
+
+
+ion-list-header ion-button{
+    position: absolute;
+}
+
+.filtrosAplicados{
+    font-size: 17px;
+    padding-top: 30px;
+}
+
+.filtros-usados ion-button{
+    font-size: 12px;
+    margin: 6px;
+    display: inline-block;
+}
+
+ion-item-divider{
+    font-size: 17px;
+    background: white;
+}
+
+ion-chip{
+    font-size: 13px;;
+}
+
+ion-chip ion-icon{
+    font-size: 15px;
+}

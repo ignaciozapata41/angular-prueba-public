@@ -1,0 +1,32 @@
+ion-row ion-label{
+    font-weight: bold;
+}
+
+ion-card-title{
+    color: var(--ion-color-danger);
+    font-weight: bold;
+}
+
+ion-card{
+    flex-direction: column;
+    max-height: 385px;
+    height: 385px;
+}
+
+ion-img{
+    height: 250px;
+}
+
+ion-label, ion-icon:hover{
+    cursor: pointer;
+}
+
+ion-card:hover{
+    cursor: pointer;
+    height: 390px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+h3{
+   color: var(--ion-color-primary); 
+}
